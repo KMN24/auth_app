@@ -1050,6 +1050,8 @@ id topPanel
 id transitionToEnd
 id transitionToStart
 id triangle
+id tvEmail
+id tvPassword
 id unchecked
 id uniform
 id up
@@ -1099,6 +1101,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout ac_auth
+layout ac_profile
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
@@ -1140,6 +1143,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string email
 string login_enter
 string login_hint
 string login_input_error
