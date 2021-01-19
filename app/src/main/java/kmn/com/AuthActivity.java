@@ -4,6 +4,7 @@ import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -31,7 +32,12 @@ public class AuthActivity extends AppCompatActivity {
         public void onClick(View v) {
             // todo Обработка нажатия по этой кнопке
             if (isEmailValid() && isPasswordValid()) {
-                // переход к приложению
+                // вход в приложение если данные верны
+                Intent startProfileIntent = new Intent(AuthActivity.this, ProfileActivity.class );
+                startProfileIntent.putExtra(ProfileActivity.EMAIL_KEY, mLogin.getText().toString());
+                startProfileIntent.putExtra(ProfileActivity.PASSWORD_KEY, mPassword.getText().toString());
+
+                startActivity(startProfileIntent);
             } else {
                 showMessage(R.string.login_input_error);
             }
@@ -39,14 +45,14 @@ public class AuthActivity extends AppCompatActivity {
     };
 
     private boolean isEmailValid() {
-        return TextUtils.isEmpty(mLogin.getText())
+        return !TextUtils.isEmpty(mLogin.getText())
                 && Patterns.EMAIL_ADDRESS.matcher(mLogin.getText()).matches();
         //И также добавим корректность ввода самого email. Для этого используем Patterns.
         // EMAIL_ADDRESS.matcher и передадим в него тот же текст из логина. И вызовем метод matches.
     }
 
     private boolean isPasswordValid() {
-        return TextUtils.isEmpty(mPassword.getText());
+        return !TextUtils.isEmpty(mPassword.getText());
     }
 
     private void showMessage(@StringRes int string) {
