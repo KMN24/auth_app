@@ -11,9 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    public static String EMAIL_KEY = "EMAIL_KEY";
-    public static String PASSWORD_KEY = "PASSWORD_KEY";
-
+    public static String USER_KEY = "USER_KEY";
 
     private AppCompatImageView mPhoto;
     private TextView mLogin;
@@ -35,9 +33,10 @@ public class ProfileActivity extends AppCompatActivity {
         mLogin = findViewById(R.id.tvEmail);
         mPassword = findViewById(R.id.tvPassword);
 
-        Bundle bundle=  getIntent().getExtras();
-        mLogin.setText(bundle.getString(EMAIL_KEY));
-        mPassword.setText(bundle.getString(PASSWORD_KEY));
+        Bundle bundle =  getIntent().getExtras();
+        User user = (User) bundle.get(USER_KEY);
+        mLogin.setText(user.getmLogin());
+        mPassword.setText(user.getmPassword());
 
         mPhoto.setOnClickListener(mOnPhotoClickListener);
     }

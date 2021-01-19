@@ -33,9 +33,9 @@ public class AuthActivity extends AppCompatActivity {
             // todo Обработка нажатия по этой кнопке
             if (isEmailValid() && isPasswordValid()) {
                 // вход в приложение если данные верны
-                Intent startProfileIntent = new Intent(AuthActivity.this, ProfileActivity.class );
-                startProfileIntent.putExtra(ProfileActivity.EMAIL_KEY, mLogin.getText().toString());
-                startProfileIntent.putExtra(ProfileActivity.PASSWORD_KEY, mPassword.getText().toString());
+                Intent startProfileIntent = new Intent(AuthActivity.this, ProfileActivity.class);
+                startProfileIntent.putExtra(ProfileActivity.USER_KEY, new User(mLogin.getText().toString(), mPassword.getText().toString()));
+
 
                 startActivity(startProfileIntent);
             } else {
