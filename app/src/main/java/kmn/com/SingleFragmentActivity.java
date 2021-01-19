@@ -13,7 +13,7 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ac_single_fragment);
-        if( savedInstanceState != null ){
+        if( savedInstanceState == null ){
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainer, getFragment() )

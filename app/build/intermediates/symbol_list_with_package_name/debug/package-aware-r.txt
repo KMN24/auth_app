@@ -932,6 +932,7 @@ id expand_activities_button
 id expanded_menu
 id flip
 id forever
+id fragmentContainer
 id gone
 id graph
 id graph_wrap
@@ -1101,9 +1102,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout ac_auth
 layout ac_profile
+layout ac_single_fragment
 layout custom_dialog
+layout fr_auth
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

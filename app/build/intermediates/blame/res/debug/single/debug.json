@@ -8,6 +8,10 @@
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fr_auth.xml.flat",
+        "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\layout\\fr_auth.xml"
+    },
+    {
         "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
@@ -32,6 +36,10 @@
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_ac_single_fragment.xml.flat",
+        "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\layout\\ac_single_fragment.xml"
+    },
+    {
         "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_ac_profile.xml.flat",
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\layout\\ac_profile.xml"
     },
@@ -50,10 +58,6 @@
     {
         "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_ac_auth.xml.flat",
-        "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\layout\\ac_auth.xml"
     },
     {
         "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
