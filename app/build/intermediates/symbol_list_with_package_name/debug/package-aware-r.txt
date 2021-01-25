@@ -888,6 +888,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btnRegistration
 id buttonEnter
 id buttonPanel
 id buttonRegister
@@ -1054,6 +1055,7 @@ id transitionToStart
 id triangle
 id tvEmail
 id tvPassword
+id tvPasswordAgain
 id unchecked
 id uniform
 id up
@@ -1106,6 +1108,7 @@ layout ac_profile
 layout ac_single_fragment
 layout custom_dialog
 layout fr_auth
+layout fr_registration
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -1147,11 +1150,17 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string email
+string input_error
 string login_enter
+string login_error
 string login_hint
-string login_input_error
-string login_register
+string login_register_error
+string login_register_success
+string logout
+string password_enter
+string password_enter_again
 string password_hint
+string register
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat

@@ -1,10 +1,5 @@
 package kmn.com;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.fragment.app.Fragment;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -15,6 +10,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.Fragment;
 
 public class AuthFragment extends Fragment {
     private Button mEnter;
@@ -35,6 +35,10 @@ public class AuthFragment extends Fragment {
         @Override
         public void onClick(View v) {
             // todo Обработка нажатия по этой кнопке
+            getFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragmentContainer, RegistrationFragment.newInstance())
+                    .commit();
         }
     };
 
@@ -46,11 +50,10 @@ public class AuthFragment extends Fragment {
                 // вход в приложение если данные верны
                 Intent startProfileIntent = new Intent(getActivity(), ProfileActivity.class);
                 startProfileIntent.putExtra(ProfileActivity.USER_KEY, new User(mLogin.getText().toString(), mPassword.getText().toString()));
-
-
                 startActivity(startProfileIntent);
+                getActivity().finish();
             } else {
-                showMessage(R.string.login_input_error);
+                showMessage(R.string.input_error);
             }
         }
     };

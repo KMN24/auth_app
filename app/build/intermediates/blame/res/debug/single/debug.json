@@ -4,6 +4,10 @@
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fr_registration.xml.flat",
+        "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\layout\\fr_registration.xml"
+    },
+    {
         "merged": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
         "source": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
