@@ -21,6 +21,7 @@ public class AuthFragment extends Fragment {
     private Button mRegister;
     private EditText mLogin;
     private EditText mPassword;
+    private SharedPreferencesHelper mSharedPreferencesHelper;
 
     public static AuthFragment newInstance() {
 
@@ -38,6 +39,7 @@ public class AuthFragment extends Fragment {
             getFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragmentContainer, RegistrationFragment.newInstance())
+                    .addToBackStack(RegistrationFragment.class.getName()) // вернемся назад при нажатии кнопки назад
                     .commit();
         }
     };
@@ -46,14 +48,26 @@ public class AuthFragment extends Fragment {
         @Override
         public void onClick(View v) {
             // todo Обработка нажатия по этой кнопке
-            if (isEmailValid() && isPasswordValid()) {
-                // вход в приложение если данные верны
-                Intent startProfileIntent = new Intent(getActivity(), ProfileActivity.class);
-                startProfileIntent.putExtra(ProfileActivity.USER_KEY, new User(mLogin.getText().toString(), mPassword.getText().toString()));
-                startActivity(startProfileIntent);
-                getActivity().finish();
-            } else {
-                showMessage(R.string.input_error);
+
+            boolean isLoginSuccess = false;
+            for(User user : mSharedPreferencesHelper.getUsers()){
+                if(user.getmLogin().equalsIgnoreCase(mLogin.getText().toString())
+                    && user.getmPassword().equals(mPassword.getText().toString())){
+                    isLoginSuccess = true;
+                    if (isEmailValid() && isPasswordValid()) {
+                        // вход в приложение если данные верны
+                        Intent startProfileIntent = new Intent(getActivity(), ProfileActivity.class);
+                        startProfileIntent.putExtra(ProfileActivity.USER_KEY, new User(mLogin.getText().toString(), mPassword.getText().toString()));
+                        startActivity(startProfileIntent);
+                        getActivity().finish();
+                    } else {
+                        showMessage(R.string.input_error);
+                    }
+                    break;
+                }
+            }
+            if( ! isLoginSuccess){
+                showMessage(R.string.login_error);
             }
         }
     };
@@ -78,6 +92,8 @@ public class AuthFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fr_auth, container, false);
+
+        mSharedPreferencesHelper = new SharedPreferencesHelper(getActivity());
 
         mLogin = v.findViewById(R.id.etLogin);
         mPassword = v.findViewById(R.id.etPassword);

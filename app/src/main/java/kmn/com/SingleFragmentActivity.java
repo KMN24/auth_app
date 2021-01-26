@@ -22,4 +22,14 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     }
 
     protected abstract Fragment getFragment();
+
+    @Override
+    public void onBackPressed() { // когда нажмем клавишу назад то вернется к предыдущему активити
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        if(fragmentManager.getBackStackEntryCount() == 1){
+            finish();
+        }else {
+            fragmentManager.popBackStack();
+        }
+    }
 }

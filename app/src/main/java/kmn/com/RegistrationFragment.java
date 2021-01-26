@@ -39,6 +39,7 @@ public class RegistrationFragment extends Fragment {
                 // если пользователь добавился то вернет true, не добавился то вернет false
                 if (isAdded) {
                     showMessage(R.string.login_register_success);
+                    getFragmentManager().popBackStack(); // после сообщения мы автома-и вернемся назад
                 } else {
                     showMessage(R.string.login_register_error);
                 }
