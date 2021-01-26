@@ -10,7 +10,7 @@
     <string name="email">Email</string>
     <string name="login_register_error">Login уже занят!</string>
     <string name="login_register_success">Успешно!</string>
-    <string name="logout">Логаут</string>
+    <string name="logout">Log out</string>
     <string name="login_error">Ошибка логина. Неверный логин или пароль.</string>
 
 

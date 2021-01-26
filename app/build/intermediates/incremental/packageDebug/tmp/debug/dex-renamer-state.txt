@@ -1,4 +1,4 @@
-#Wed Jan 27 00:40:16 ALMT 2021
+#Wed Jan 27 00:56:50 ALMT 2021
 base.0=D\:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

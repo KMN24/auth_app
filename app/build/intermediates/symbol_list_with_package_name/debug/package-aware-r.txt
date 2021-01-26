@@ -851,6 +851,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id actionLogout
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1119,6 +1120,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu profile_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description
