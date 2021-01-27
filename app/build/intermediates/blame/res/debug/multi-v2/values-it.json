@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Meder\\Android_studio\\Android_st_Projects\\MyFirstApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
+            "outputFile": "D:\\Meder\\Android_studio\\Android_st_Projects\\auth_app\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-it\\values-it.xml",
             "map": [
                 {
                     "source": "C:\\Users\\KMN\\.gradle\\caches\\transforms-2\\files-2.1\\3a4bf45ee1cd2799bf6d0559eb3917d7\\appcompat-1.2.0\\res\\values-it\\values-it.xml",
