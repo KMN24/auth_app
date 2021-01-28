@@ -78,17 +78,17 @@ public class SharedPreferencesHelper {
         return successLogins;
     }
 
-    public boolean login(User user) {
+    public User login(String login, String passsword) {
         List<User> users = getUsers();
         for (User u : users) {
-            if (user.getmLogin().equalsIgnoreCase(u.getmLogin())
-                    && user.getmPassword().equals(u.getmPassword())) {
+            if (login.equalsIgnoreCase(u.getmLogin())
+                    && passsword.equals(u.getmPassword())) {
                 u.setHasSuccessLogin(true);
                 mSharedPreferences.edit().putString(USERS_KEY, mGson.toJson(users, USERS_TYPE)).apply();
-                return true;
+                return u; // возвращаем userа еслинайдем
             }
         }
-        return false;
+        return null; // если не найдем то возвращаем null
     }
 
 }
